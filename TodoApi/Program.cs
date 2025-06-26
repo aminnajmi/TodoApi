@@ -15,9 +15,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite("Data Source=todo.db"));
-
+builder.Services.AddAutoMapper(typeof(Program));
 // Register your service
-builder.Services.AddScoped<ITodoService, TodoServices>();
+builder.Services.AddScoped<ITodoService, TodoService>();
 
 var app = builder.Build();
 

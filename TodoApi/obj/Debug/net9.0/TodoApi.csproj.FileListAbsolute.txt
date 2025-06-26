@@ -154,3 +154,6 @@
 /Users/aminm/Documents/projects/TodoApi/TodoApi/bin/Debug/net9.0/runtimes/win-arm64/native/e_sqlite3.dll
 /Users/aminm/Documents/projects/TodoApi/TodoApi/bin/Debug/net9.0/runtimes/win-x64/native/e_sqlite3.dll
 /Users/aminm/Documents/projects/TodoApi/TodoApi/bin/Debug/net9.0/runtimes/win-x86/native/e_sqlite3.dll
+/Users/aminm/Documents/projects/TodoApi/TodoApi/obj/Debug/net9.0/TodoApi.sourcelink.json
+/Users/aminm/Documents/projects/TodoApi/TodoApi/bin/Debug/net9.0/AutoMapper.dll
+/Users/aminm/Documents/projects/TodoApi/TodoApi/bin/Debug/net9.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

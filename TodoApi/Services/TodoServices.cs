@@ -1,14 +1,17 @@
-namespace TodoApi.Services;
-using TodoApi.Models;
-using Microsoft.EntityFrameworkCore;
-using TodoApi.Services.Interfaces;
-using TodoApi.Data;
+// Services/TodoService.cs
 
-public class TodoServices : ITodoService
+using Microsoft.EntityFrameworkCore;
+using TodoApi.Data;
+using TodoApi.Models;
+using TodoApi.Services.Interfaces;
+
+namespace TodoApi.Services
+{
+    public class TodoService : ITodoService
     {
         private readonly AppDbContext _context;
 
-        public TodoServices(AppDbContext context)
+        public TodoService(AppDbContext context)
         {
             _context = context;
         }
@@ -32,11 +35,12 @@ public class TodoServices : ITodoService
 
         public async Task<bool> UpdateAsync(int id, TodoItem updatedItem)
         {
-            var item = await _context.TodoItems.FindAsync(id);
-            if (item == null) return false;
+            var existing = await _context.TodoItems.FindAsync(id);
+            if (existing == null)
+                return false;
 
-            item.Title = updatedItem.Title;
-            item.IsCompleted = updatedItem.IsCompleted;
+            existing.Title = updatedItem.Title;
+            existing.IsCompleted = updatedItem.IsCompleted;
 
             await _context.SaveChangesAsync();
             return true;
@@ -44,11 +48,13 @@ public class TodoServices : ITodoService
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var item = await _context.TodoItems.FindAsync(id);
-            if (item == null) return false;
+            var existing = await _context.TodoItems.FindAsync(id);
+            if (existing == null)
+                return false;
 
-            _context.TodoItems.Remove(item);
+            _context.TodoItems.Remove(existing);
             await _context.SaveChangesAsync();
             return true;
         }
+    }
 }
