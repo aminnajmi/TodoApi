@@ -157,3 +157,11 @@
 /Users/aminm/Documents/projects/TodoApi/TodoApi/obj/Debug/net9.0/TodoApi.sourcelink.json
 /Users/aminm/Documents/projects/TodoApi/TodoApi/bin/Debug/net9.0/AutoMapper.dll
 /Users/aminm/Documents/projects/TodoApi/TodoApi/bin/Debug/net9.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/aminm/Documents/projects/TodoApi/TodoApi/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/aminm/Documents/projects/TodoApi/TodoApi/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/aminm/Documents/projects/TodoApi/TodoApi/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/aminm/Documents/projects/TodoApi/TodoApi/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/Users/aminm/Documents/projects/TodoApi/TodoApi/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+/Users/aminm/Documents/projects/TodoApi/TodoApi/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/aminm/Documents/projects/TodoApi/TodoApi/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+/Users/aminm/Documents/projects/TodoApi/TodoApi/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll

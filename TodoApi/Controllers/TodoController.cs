@@ -1,14 +1,13 @@
-// Controllers/TodoController.cs
-
 using Microsoft.AspNetCore.Mvc;
 using TodoApi.Services.Interfaces;
 using TodoApi.Dtos;
 using TodoApi.Models;
 using AutoMapper;
 using TodoApi.Models.DTOs;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TodoApi.Controllers;
-
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class TodoController : ControllerBase
