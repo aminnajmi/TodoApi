@@ -46,6 +46,9 @@ public class TodoController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<TodoItemDto>> Create(CreateTodoDto dto)
     {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+        
         var todo = _mapper.Map<TodoItem>(dto);
         var created = await _todoService.CreateAsync(todo);
         var resultDto = _mapper.Map<TodoItemDto>(created);
@@ -69,6 +72,10 @@ public class TodoController : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {
+
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
         var success = await _todoService.DeleteAsync(id);
         if (!success)
             return NotFound();
